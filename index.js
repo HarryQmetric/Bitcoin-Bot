@@ -1,4 +1,30 @@
-.travis.yml
+project_folder
+|_.travis.yml
+|_hello.js
+|_package.json
+|_other_files
+language: node_js
+node_js:
+ - "node"
+
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello Travis!\n')
+}).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/');
+{
+  "name": "learn-travis-Harry",
+  "description": "Simple Travis-CI check for JSHint (Code Linting)",
+  "author": "Harry Dyer :-)",
+  "version": "0.0.1",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "scripts": {
+    "test": "jshint index.js"
+  }
+}
 'use strict';
 
 const axios = require("axios");
