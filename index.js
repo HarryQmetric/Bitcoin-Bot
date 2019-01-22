@@ -1,4 +1,30 @@
-return {
+.travis.yml
+'use strict';
+
+const axios = require("axios");
+const url   = "https://api.coindesk.com/v1/bpi/currentprice.json"
+
+function verifyWebhook (body) {
+  if (!body || body.token !== "3FIjjMTBXUYXOQio6CYYxK3TN4bKE8XVAsBUGWbV-Rk=") {
+    const error = new Error('Invalid credentials');
+    error.code = 401;
+    throw error;
+  }
+}
+
+function createMessage(query, response) {
+  var HEADER = {
+    "title": "Bitcoin Price (" + query + ")"
+  };
+  if (query == "GBP"){
+    response = "£"+response;
+  }else if (query == "EUR"){
+    response = "€"+response;
+  }else if (query == "USD"){
+    response = "$"+response;
+  }
+  
+  return {
   "cards": [
     {
       "header": HEADER,
@@ -28,6 +54,7 @@ return {
                 }
                 ]
             }
+            
             ]
         }
         ]
