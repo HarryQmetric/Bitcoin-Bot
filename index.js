@@ -1,5 +1,4 @@
-﻿//Bitcoin bot
-language: node_js
+﻿language: node_js
 node_js:
  - "node"
 
