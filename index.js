@@ -1,12 +1,6 @@
-﻿const makeBitcoinRequest = require('./src/makeBitcoinRequest');
+'use strict';
+const makeBitcoinRequest = require('./src/makeBitcoinRequest');
 const verifyWebhook = require('./src/verifyWebhook');
-
-
-
-
-
-
-                     
 
 
 exports.bitcoinPrice = (req, res) => {
