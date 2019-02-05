@@ -1,0 +1,26 @@
+{
+  "name": "bitcoin-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ava": "^1.2.1",
+    "axios": "^0.18.0",
+    "babel-register": "^6.26.0",
+    "jshint": "^2.9.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarryQmetric/Bitcoin-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarryQmetric/Bitcoin-Bot/issues"
+  },
+  "homepage": "https://github.com/HarryQmetric/Bitcoin-Bot#readme"
+}

@@ -1,87 +1,13 @@
-﻿language: node_js
-node_js:
- - "node"
+﻿const makeBitcoinRequest = require('./src/makeBitcoinRequest');
+const verifyWebhook = require('./src/verifyWebhook');
 
-const axios = require("axios");
-const url   = "https://api.coindesk.com/v1/bpi/currentprice.json"
 
-function verifyWebhook (body) {
-  if (!body || body.token !== "3FIjjMTBXUYXOQio6CYYxK3TN4bKE8XVAsBUGWbV-Rk=") {
-    const error = new Error('Invalid credentials');
-    error.code = 401;
-    throw error;
-  }
-}
 
-function createMessage(query, response) {
-  var HEADER = {
-    "title": "Bitcoin Price (" + query + ")"
-  };
-  if (query == "GBP"){
-    response = "£"+response;
-  }else if (query == "EUR"){
-    response = "€"+response;
-  }else if (query == "USD"){
-    response = "$"+response;
-  }
-  
-  return {
-  "cards": [
-    {
-      "header": HEADER,
-      "sections": [
-        {
-          "widgets": [
-            {
-              "textParagraph": {
-                "text": response
-              }
-            }
-          ]
-        },
-        {
-          "widgets": [
-            {
-              "buttons": [
-                {
-                  "imageButton": {
-                    "iconUrl": "https://cdn1.iconfinder.com/data/icons/personal-business-finance-set-4/256/Personal__Business_Finance-10-512.png",
-                    "onClick": {
-                      "openLink": {
-                        "url": "https://www.coindesk.com/price/bitcoin"
-                      }
-                    }
-                  }
-                }
-                ]
-            }
-            
-            ]
-        }
-        ]
-    }
-    ]
-};
-}
+
 
 
                      
-function makeBitcoinRequest (query) {
-  
-  return new Promise((resolve,reject) => {
-    axios.get(url).then(response => {
-      // Return a formatted message
-      resolve(createMessage(query,response.data.bpi[query].rate));
-    })
-    .catch(error => {    
-      console.log(error); 
-      reject(error);
-      return;
-    });
 
-  });
-  
-}
 
 exports.bitcoinPrice = (req, res) => {
   return Promise.resolve()
@@ -109,3 +35,4 @@ exports.bitcoinPrice = (req, res) => {
       return Promise.reject(err);
     });
 };
+ 
