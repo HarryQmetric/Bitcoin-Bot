@@ -1,6 +1,4 @@
-﻿language: node_js
-node_js:
- - "node"
+'use strict';
 
 const axios = require("axios");
 const url   = "https://api.coindesk.com/v1/bpi/currentprice.json"
