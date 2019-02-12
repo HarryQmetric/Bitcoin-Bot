@@ -58,15 +58,21 @@ test('returns a widget with the amount in dollars', t => {
 
 test('returns an image button ', t => {
     const expectedResult ={
-        "imageButton": {
-            "iconUrl": "https://cdn1.iconfinder.com/data/icons/personal-business-finance-set-4/256/Personal__Business_Finance-10-512.png",
-            "onClick": {
-              "openLink": {
-                "url": "https://www.coindesk.com/price/bitcoin"
-              }
-            }
-        }
+        "widgets": [
+            {
+              "buttons": [
+                {
+                  "imageButton": {
+                    "iconUrl": "https://cdn1.iconfinder.com/data/icons/personal-business-finance-set-4/256/Personal__Business_Finance-10-512.png",
+                    "onClick": {
+                      "openLink": {
+                        "url": "https://www.coindesk.com/price/bitcoin"
+                      }
+                    }
+                }
+            }]
+        }]
     }
-    const actualResult = createMessage( )
-    t.deepEqual(expectedResult, actualResult.cards[0].sections[0].widgets[0].imageButton[0].iconUrl.onClick[0].openLink[0].url);
+    const actualResult = createMessage('abc',1209 )
+    t.deepEqual(expectedResult, actualResult.cards[0].sections[1].widgets[0].buttons[0].imageButton[0].iconUrl.onClick[0].openLink[0].url);
 })
