@@ -74,5 +74,5 @@ test('returns an image button ', t => {
         }]
     }
     const actualResult = createMessage('abc',1209 )
-    t.deepEqual(expectedResult, actualResult.cards[0].sections[1].widgets[0].buttons[0].imageButton[0].iconUrl.onClick[0].openLink[0].url);
+    t.deepEqual(expectedResult, actualResult.cards[0].sections[1]);
 })

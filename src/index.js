@@ -1,6 +1,6 @@
 'use strict';
-const makeBitcoinRequest = require('./src/makeBitcoinRequest');
-const verifyWebhook = require('./src/verifyWebhook');
+const makeBitcoinRequest = require('./makeBitcoinRequest');
+const verifyWebhook = require('./verifyWebhook');
 
 
 exports.bitcoinPrice = (req, res) => {
@@ -29,4 +29,3 @@ exports.bitcoinPrice = (req, res) => {
       return Promise.reject(err);
     });
 };
- 
