@@ -10,6 +10,7 @@ exports.bitcoinPrice = (req, res) => {
       if (req.method !== 'POST') {
         const error = new Error('Only POST requests are accepted');
         error.code = 405;
+        console.log('OMG!');
         throw error;
       }
     
