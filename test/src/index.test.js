@@ -16,9 +16,10 @@ test('throws an error if req.method is not POST', async t => {
     t.is(error.code, 405);
 })
 
-// test('calls verifywebhook', t=> {
-//     const expectedResult ={
-//        verifywebhook() 
-//     }
-// })
-// const actualResult = verifywebhook()
+//test('ensure verify webhook is called', async t => {
+    //const req = {
+
+
+    
+  //  }
+//})
