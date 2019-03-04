@@ -2,7 +2,6 @@
 const makeBitcoinRequest = require('./makeBitcoinRequest');
 const verifyWebhook = require('./verifyWebhook');
 
-
 exports.bitcoinPrice = (req, res) => {
   return Promise.resolve()
     .then(() => {
@@ -10,7 +9,6 @@ exports.bitcoinPrice = (req, res) => {
       if (req.method !== 'POST') {
         const error = new Error('Only POST requests are accepted');
         error.code = 405;
-        console.log('OMG!');
         throw error;
       }
     
