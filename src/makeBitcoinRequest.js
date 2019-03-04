@@ -1,4 +1,3 @@
-//import createMessage from '../../src/createMessage'
 const axios = require("axios");
 
 const url   = "https://api.coindesk.com/v1/bpi/currentprice.json"
