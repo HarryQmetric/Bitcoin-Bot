@@ -70,3 +70,8 @@ test('calls api and returns the rate', async t => {
 
     t.is(actualResponse.cards[0].sections[0].widgets[0].textParagraph.text, '£666.45' )
 })
+
+const server = nock('https://api.coindesk.com');
+
+server.get('/v1/bpi/currentprice.json')
+    .replyWithError("invalid web path")
