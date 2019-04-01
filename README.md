@@ -70,7 +70,7 @@ During the last day at Qmetric, we reviwed the entire project to ensure I did no
 containing all the log book entries
 
 This is an example of how a bot retrieves a response using an API:
-![API ](https://user-images.githubusercontent.com/46711154/55329194-ecb24380-5485-11e9-9ecf-8ad3fc240e54.jpeg)
+
 
 This is the coindesk website where the API retrived the response:
 https://www.coindesk.com/price/bitcoin
