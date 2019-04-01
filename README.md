@@ -1,4 +1,6 @@
-#Bitcoin Price Chat Bot Project
+# Bitcoin Price Chat Bot Project
+
+[![Build Status](https://travis-ci.org/HarryQmetric/Bitcoin-Bot.svg?branch=master)](https://travis-ci.org/HarryQmetric/Bitcoin-Bot)
 
 Log Book Entry 1-
 The 1st at Qmetric I was given some reseacrh to do based on what this whole projects funcitonality which is to create a bot.
