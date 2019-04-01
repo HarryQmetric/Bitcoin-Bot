@@ -8,12 +8,11 @@ and Dollars.
 Log Book Entry 2-
 During the 2nd at Qmetric I continued on with further research and begun to understand how the echo bot was going to work.
 I'm going to be using Google Hangouts which provides a template of code which I will then edit to better suit the requirements. I have 
-created the echo bot in the Google cloud funcitons editor, which provides a user who queries the bitcoin conversion rate in pounds, dollars or euros with the current rate but 
-the output the user recieves does not have much detail other than a number the program fetches. 
+created the echo bot in the Google cloud funcitons editor. The return provides a user who queries the bitcoin conversion rate in pounds, dollars or euros with the current rate but the output the user recieves does not have much detail other than a number the program fetches. 
 
 Log Book Entry 3-
-During the 3rd at Qmetric I continued on with the Echo bot that displayed the current conversion rate of bitcoin to 
-Pounds, Euro and Dollars.I improved the code by adding the currency symbols to the corresponding currency, but in order to do this
+During the 3rd at Qmetric I continued on with the Echo bot that displayes the current conversion rate of bitcoin to 
+Pounds, Euro and Dollars. I improved the code by adding the currency symbols to the corresponding currency, but in order to do this
 I had to further understanding of Javascript and use my knowledge I already have from Python to help me understand 
 and complete that task. 
 
