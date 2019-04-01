@@ -70,7 +70,7 @@ During the last day at Qmetric, we reviwed the entire project to ensure I did no
 containing all the log book entries
 
 This is an example of how a bot retrieves a response using an API:
-https://www.lucidchart.com/documents/edit/4802a5f5-6850-46c2-9801-550b0181a4cc/0
+
 
 This is the coindesk website where the API retrived the response:
 https://www.coindesk.com/price/bitcoin
